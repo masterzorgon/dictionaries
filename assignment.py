@@ -22,13 +22,14 @@ movie_ratings = {
     "White Chicks": 3
 }
 
-movie_title = input("Enter a movie title: ")
+movie_title = input("\nEnter a movie title: ")
 
 
 def recommend_movie(movie_ratings, movie_title):
     for movie in movie_ratings:
         if movie_title == movie and movie_ratings[movie] >= 8:
-            print(f"Recommended movie: {movie}")
+            print(f"Recommended movie: {movie_title}")
+            break
         elif movie_title != movie and movie_ratings[movie] >= 8:
             print(f"Recommended movie: {movie}")
 
